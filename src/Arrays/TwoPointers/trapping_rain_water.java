@@ -4,7 +4,7 @@ public class trapping_rain_water {class Solution {
     public int trap(int[] height) {
         int l=0;
         int r=height.length-1;
-        int ans=0;
+        int answ=0;
         int lmax=0;
         int rmax=0;
 
@@ -12,15 +12,15 @@ public class trapping_rain_water {class Solution {
             lmax=Math.max(lmax,height[l]);
             rmax=Math.max(rmax,height[r]);
             if(lmax<rmax){
-                ans+=lmax-height[l];
+                answ+=lmax-height[l];
                 l++;
             }
             else{
-                ans+=rmax-height[r];
+                answ+=rmax-height[r];
                 r--;
             }
         }
-        return ans;
+        return answ;
     }
 }
 
